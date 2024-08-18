@@ -1,0 +1,14 @@
+#services-table {
+    display: flex;
+    flex-direction: row;
+    border-radius: 10px;
+    border-left: 4px solid rgb(54, 113, 254);
+}
+
+#services-table .ml-auto{
+    margin-left: auto;
+}
+
+.mr-10{
+    margin-right: 10px;
+}
