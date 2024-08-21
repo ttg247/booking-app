@@ -3,9 +3,8 @@
 @section('content')
     <div id="marketing-cards" class="row">
         <div class="col-md-12 d-flex justify-content-center align-items-center">
-            <div class="MuiStack-root report-card-body">
-                <h1 class="MuiTypography-root MuiTypography-h1 report-week">Week to date</h1>
-                <h1 class="MuiTypography-root MuiTypography-h1 report-total">NGN&nbsp;0</h1>
+            <div class="MuiStack-root report-card-body py-2 my-4">
+                <h1 class="MuiTypography-root MuiTypography-h1 report-total">Marketing Page</h1>
                 
                 <div class="MuiStack-root paper-holder">
                     <div class="MuiPaper-root MuiPaper-outlined MuiPaper-rounded MuiCard-root paper-container">
