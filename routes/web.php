@@ -6,6 +6,11 @@ Route::get('/', function () {
     return view('home');
 });
 
+
+Route::get('/online-bookings', function () {
+    return view('bookings.index');
+});
+
 Route::get('/customers', function () {
     return view('clients.index');
 });
