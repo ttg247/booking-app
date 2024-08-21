@@ -6,7 +6,6 @@ Route::get('/', function () {
     return view('home');
 });
 
-
 Route::get('/online-bookings', function () {
     return view('bookings.index');
 });
