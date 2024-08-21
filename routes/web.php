@@ -14,6 +14,10 @@ Route::get('/customers', function () {
     return view('clients.index');
 });
 
+Route::get('/marketing', function () {
+    return view('marketing.index');
+});
+
 Route::get('/reports', function () {
     return view('reports.index');
 });
