@@ -35,19 +35,19 @@
                         </div>
                     </div>
                 </div>
-                <div class="MuiStack-root report-paper-container">
-                    <div class="MuiPaper-root MuiPaper-outlined MuiPaper-rounded MuiCard-root report-paper-root">
-                        <button class="MuiButtonBase-root MuiCardActionArea-root report-paper" tabindex="0" type="button">
-                            <div class="MuiStack-root report-paper-row">
-                                <div class="MuiStack-root report-paper-icon">
+                <div class="MuiStack-root paper-holder">
+                    <div class="MuiPaper-root MuiPaper-outlined MuiPaper-rounded MuiCard-root paper-container">
+                        <button class="MuiButtonBase-root MuiCardActionArea-root paper-button" tabindex="0" type="button">
+                            <div class="MuiStack-root paper-row">
+                                <div class="MuiStack-root paper-icon">
                                     <img alt="Appointments" loading="lazy" width="38" height="38" decoding="async" data-nimg="1" src="/images/reports/reports-appointments.png" style="color: transparent;">
                                 </div>
-                                <div class="MuiStack-root report-paper-details">
-                                    <h3 class="MuiTypography-root MuiTypography-h3 report-paper-header">Appointments</h3>
-                                    <span class="MuiTypography-root MuiTypography-body3 report-paper-info">See your revenue based on the amounts from appointments in the selected period.</span>
+                                <div class="MuiStack-root paper-details">
+                                    <h3 class="MuiTypography-root MuiTypography-h3 paper-header">Appointments</h3>
+                                    <span class="MuiTypography-root MuiTypography-body3 paper-info">See your revenue based on the amounts from appointments in the selected period.</span>
                                 </div>
-                                <div class="MuiStack-root report-paper-icon">
-                                    <svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium report-paper-svg" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="ChevronRightIcon">
+                                <div class="MuiStack-root paper-icon">
+                                    <svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium paper-svg" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="ChevronRightIcon">
                                         <path d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path>
                                     </svg>
                                 </div>
@@ -56,18 +56,18 @@
                             <span class="MuiTouchRipple-root report-link"></span>
                         </button>
                     </div>
-                    <div class="MuiPaper-root MuiPaper-outlined MuiPaper-rounded MuiCard-root report-paper-root">
-                        <button class="MuiButtonBase-root MuiCardActionArea-root report-paper" tabindex="0" type="button">
-                            <div class="MuiStack-root report-paper-row">
-                                <div class="MuiStack-root report-paper-icon">
+                    <div class="MuiPaper-root MuiPaper-outlined MuiPaper-rounded MuiCard-root paper-container">
+                        <button class="MuiButtonBase-root MuiCardActionArea-root paper-button" tabindex="0" type="button">
+                            <div class="MuiStack-root paper-row">
+                                <div class="MuiStack-root paper-icon">
                                     <img alt="Clients" loading="lazy" width="38" height="38" decoding="async" data-nimg="1" src="/images/reports/reports-clients.png" style="color: transparent;">
                                 </div>
-                                <div class="MuiStack-root report-paper-details">
-                                    <h3 class="MuiTypography-root MuiTypography-h3 report-paper-header">Clients</h3>
-                                    <span class="MuiTypography-root MuiTypography-body3 report-paper-info">Discover how many new clients you have acquired and identify the best ones.</span>
+                                <div class="MuiStack-root paper-details">
+                                    <h3 class="MuiTypography-root MuiTypography-h3 paper-header">Clients</h3>
+                                    <span class="MuiTypography-root MuiTypography-body3 paper-info">Discover how many new clients you have acquired and identify the best ones.</span>
                                 </div>
-                                <div class="MuiStack-root report-paper-icon">
-                                    <svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium report-paper-svg" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="ChevronRightIcon">
+                                <div class="MuiStack-root paper-icon">
+                                    <svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium paper-svg" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="ChevronRightIcon">
                                         <path d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path>
                                     </svg>
                                 </div>
