@@ -17,3 +17,8 @@ Route::get('/reports', function () {
 Route::get('/services', function () {
     return view('services.index');
 });
+
+
+Route::get('/staff', function () {
+    return view('staff.index');
+});

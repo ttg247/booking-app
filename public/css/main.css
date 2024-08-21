@@ -256,3 +256,48 @@
     font-size: 28px;
     transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+/* features component*/
+#staff-cards{
+    margin: 100px 0;
+}
+.feature-container {
+    display: flex;
+    flex-direction: column;
+    -webkit-box-align: center;
+    align-items: center;
+    padding: 32px 32px 24px;
+    text-align: center;
+    border: 1px solid rgb(224, 224, 224);
+    border-radius: 18px;
+    position: relative;
+    max-width: 288px;
+}
+.feature-icon {
+    display: inline-flex;
+    background-color: rgb(255, 229, 0);
+    position: absolute;
+    top: -20px;
+    border-radius: 50%;
+}
+.feature-title {
+    margin: 0px 0px 6px;
+    font-style: normal;
+    line-height: 16px;
+    letter-spacing: 0.02em;
+    font-family: __soehne_13bb1b, __soehne_Fallback_13bb1b;
+    color: rgb(22, 18, 42);
+    font-weight: 500;
+    font-size: 16px;
+}
+.feature-details {
+    margin: 0px;
+    font-family: __soehne_13bb1b, __soehne_Fallback_13bb1b;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 0.4px;
+    font-feature-settings: "tnum", "lnum";
+    color: rgb(138, 136, 148);
+    font-size: 14px;
+    line-height: 18px;
+}
