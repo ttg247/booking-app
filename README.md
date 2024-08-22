@@ -36,7 +36,7 @@ Before you begin, ensure you have met the following requirements:
 1. **Clone the repository:**
 
     ```bash
-    git clone https://github.com/yourusername/booking-app.git
+    git clone https://github.com/ttg247/booking-app.git
     cd booking-app
     ```
 
@@ -129,9 +129,3 @@ Contributions are welcome! Please follow these steps:
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-```
-
-### Additional Tips:
-- Replace `yourusername` in the GitHub clone URL with your actual GitHub username.
-- Add any additional sections or details specific to your project, such as testing, deployment instructions, or API documentation, if applicable.
-- Keep the README up to date as your project evolves.
