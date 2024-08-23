@@ -3,6 +3,17 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<title>Skydash Admin</title>
+		<!-- Icons CSS -->
+		<link rel="stylesheet" href="{{ asset('template-css/fullcalendar.css') }}">
+		<link rel="stylesheet" href="{{ asset('template-css/feather.css') }}">
+		<link rel="stylesheet" href="{{ asset('template-css/select2.css') }}">
+		<link rel="stylesheet" href="{{ asset('template-css/dropzone.css') }}">
+		<link rel="stylesheet" href="{{ asset('template-css/uppy.min.css') }}">
+		<link rel="stylesheet" href="{{ asset('template-css/jquery.steps.css') }}">
+		<link rel="stylesheet" href="{{ asset('template-css/jquery.timepicker.css') }}">
+		<link rel="stylesheet" href="{{ asset('template-css/quill.snow.css') }}">
+		<!-- Date Range Picker CSS -->
+		<link rel="stylesheet" href="{{ asset('template-css/daterangepicker.css') }}">
 		<!-- plugins:css -->
     	<link rel="stylesheet" href="{{ asset('vendors/feather/feather.css') }}">
 		<link rel="stylesheet" href="{{ asset('vendors/ti-icons/css/themify-icons.css') }}">
@@ -19,6 +30,13 @@
 		<!-- inject:css -->
 		<link rel="stylesheet" href="{{ asset('css/style.css') }}">
 		<link rel="stylesheet" href="{{ asset('css/main.css') }}">		
+
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.9.0/fullcalendar.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.9.0/fullcalendar.js"></script>
+	
 		<!-- endinject -->
 		<link rel="shortcut icon" href="{{ asset('images/favicon.png') }}" />
 	</head>

@@ -6,6 +6,14 @@ Route::get('/', function () {
     return view('home');
 });
 
+Route::get('/dashboard', function () {
+    return view('welcome');
+});
+
+Route::get('/calendar', function () {
+    return view('calendar.index');
+});
+
 Route::get('/online-bookings', function () {
     return view('bookings.index');
 });
