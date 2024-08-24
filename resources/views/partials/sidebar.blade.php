@@ -6,6 +6,39 @@
                 <span class="menu-title">Dashboard</span>
             </a>
         </li>
+
+
+        <li class="nav-item">
+            <a class="nav-link" href="index">
+                <i class="icon-grid menu-icon"></i>
+                <span class="menu-title">Calendar</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="index">
+                <i class="icon-grid menu-icon"></i>
+                <span class="menu-title">Services</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="index">
+                <i class="icon-grid menu-icon"></i>
+                <span class="menu-title">Contacts</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="index">
+                <i class="icon-grid menu-icon"></i>
+                <span class="menu-title">Reports</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="index">
+                <i class="icon-grid menu-icon"></i>
+                <span class="menu-title">Staff</span>
+            </a>
+        </li>
+
         <li class="nav-item">
             <a class="nav-link" data-bs-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
                 <i class="icon-layout menu-icon"></i>

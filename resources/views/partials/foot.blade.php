@@ -51,3 +51,4 @@
 <script src='{{ asset('template-js/dropzone.min.js') }}'></script>
 <script src='{{ asset('template-js/uppy.min.js') }}'></script>
 <script src='{{ asset('template-js/quill.min.js') }}'></script>
+

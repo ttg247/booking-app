@@ -1,8 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <div id="calendar-card" class="row">
-        
+    <div id="calendar-card" class="row">        
         <div class="container-fluid">
             <div class="row justify-content-center">
               <div class="col-12">
