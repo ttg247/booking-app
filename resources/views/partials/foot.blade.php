@@ -22,6 +22,7 @@
 <script src="{{ asset('js/Chart.roundedBarCharts.js') }}"></script> 
 <!-- End custom js for this page-->
 
+
 <script src='{{ asset('template-js/fullcalendar.js') }}'></script>
 <script src='{{ asset('template-js/fullcalendar.custom.js') }}'></script>
 <script src="{{ asset('template-js/jquery.min.js') }}"></script>

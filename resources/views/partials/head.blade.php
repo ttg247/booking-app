@@ -5,16 +5,11 @@
 		<title>Skydash Admin</title>
 		<!-- Icons CSS -->
 		<link rel="stylesheet" href="{{ asset('template-css/fullcalendar.css') }}">
-		<link rel="stylesheet" href="{{ asset('template-css/feather.css') }}">
-		<link rel="stylesheet" href="{{ asset('template-css/select2.css') }}">
-		<link rel="stylesheet" href="{{ asset('template-css/dropzone.css') }}">
-		<link rel="stylesheet" href="{{ asset('template-css/uppy.min.css') }}">
-		<link rel="stylesheet" href="{{ asset('template-css/jquery.steps.css') }}">
 		<link rel="stylesheet" href="{{ asset('template-css/jquery.timepicker.css') }}">
-		<link rel="stylesheet" href="{{ asset('template-css/quill.snow.css') }}">
 		<!-- Date Range Picker CSS -->
 		<link rel="stylesheet" href="{{ asset('template-css/daterangepicker.css') }}">
 		<!-- plugins:css -->
+    	<link rel="stylesheet" href="{{ asset('vendors/fontawesome-6.6.0/css/all.min.css') }}">
     	<link rel="stylesheet" href="{{ asset('vendors/feather/feather.css') }}">
 		<link rel="stylesheet" href="{{ asset('vendors/ti-icons/css/themify-icons.css') }}">
 		<link rel="stylesheet" href="{{ asset('vendors/css/vendor.bundle.base.css') }}">
