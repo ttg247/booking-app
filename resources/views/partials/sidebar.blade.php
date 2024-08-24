@@ -6,8 +6,6 @@
                 <span class="menu-title">Dashboard</span>
             </a>
         </li>
-
-
         <li class="nav-item">
             <a class="nav-link" href="{{ route('calendar') }}">
                 <i class="fa fa-calendar menu-icon"></i>
