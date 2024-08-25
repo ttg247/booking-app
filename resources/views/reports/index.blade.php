@@ -2,7 +2,7 @@
 
 @section('content')
     <div id="report-cards" class="row">
-        <div class="col-md-12 d-flex justify-content-center align-items-center">
+        <div class="col-md-12 p-4 d-flex justify-content-center align-items-center">
             <div class="MuiStack-root report-card-body">
                 <h1 class="MuiTypography-root MuiTypography-h1 report-week">Week to date</h1>
                 <h1 class="MuiTypography-root MuiTypography-h1 report-total">NGN&nbsp;0</h1>
@@ -37,7 +37,7 @@
                 </div>
                 <div class="MuiStack-root paper-holder">
                     <div class="MuiPaper-root MuiPaper-outlined MuiPaper-rounded MuiCard-root paper-container">
-                        <a class="MuiStack-root paper-details" href="{{ route('reports-appointments') }}">
+                        <a class="MuiStack-root paper-link" href="{{ route('reports-appointments') }}">
                             <button class="MuiButtonBase-root MuiCardActionArea-root paper-button" tabindex="0" type="button">
                                 <div class="MuiStack-root paper-row">
                                     <div class="MuiStack-root paper-icon">
@@ -59,16 +59,17 @@
                         </a>
                     </div>
                     <div class="MuiPaper-root MuiPaper-outlined MuiPaper-rounded MuiCard-root paper-container">
-                        <a class="MuiStack-root paper-details" href="{{ route('reports-clients') }}">
+                        <a class="MuiStack-root paper-link"  href="{{ route('reports-clients') }}">
                             <button class="MuiButtonBase-root MuiCardActionArea-root paper-button" tabindex="0" type="button">
                                 <div class="MuiStack-root paper-row">
                                     <div class="MuiStack-root paper-icon">
                                         <img alt="Clients" loading="lazy" width="38" height="38" decoding="async" data-nimg="1" src="/images/reports/reports-clients.png" style="color: transparent;">
                                     </div>
                                     <div >
+                                        <div class="paper-details">
                                             <h3 class="MuiTypography-root MuiTypography-h3 paper-header">Clients</h3>
                                             <span class="MuiTypography-root MuiTypography-body3 paper-info">Discover how many new clients you have acquired and identify the best ones.</span>
-                                        
+                                        </div>
                                     </div>
                                     <div class="MuiStack-root paper-icon">
                                         <svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium paper-svg" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="ChevronRightIcon">

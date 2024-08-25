@@ -10,11 +10,14 @@
                     <h2 class="page-title">Calendar</h2>
                   </div>
                   <div class="col-auto">
-                    <button type="button" class="btn" data-toggle="modal" data-target=".modal-calendar"><span class="fe fe-filter fe-16 text-muted"></span></button>
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#eventModal"><span class="fe fe-plus fe-16 mr-3"></span>New Event</button>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#eventModal"><span class="fa fa-plus fa-16 mr-3"></span>New Event</button>
                   </div>
                 </div>
                 <div id='calendar'></div>
+              </div> <!-- .col-12 -->
+            </div> <!-- .row -->
+
+
                 <!-- new event modal -->
                 <div class="modal fade" id="eventModal" tabindex="-1" role="dialog" aria-labelledby="eventModalLabel" aria-hidden="true">
                   <div class="modal-dialog" role="document">
@@ -96,8 +99,6 @@
                     </div>
                   </div>
                 </div> <!-- new event modal -->
-              </div> <!-- .col-12 -->
-            </div> <!-- .row -->
         </div> <!-- .container-fluid -->
 
        
@@ -123,8 +124,8 @@
             },
             buttonIcons:
             {
-                prev: 'fe-arrow-left',
-                next: 'fe-arrow-right',
+                prev: 'fa fa-arrow-left',
+                next: 'fa fa-arrow-right',
                 prevYear: 'left-double-arrow',
                 nextYear: 'right-double-arrow'
             },

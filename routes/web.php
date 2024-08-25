@@ -18,8 +18,8 @@ Route::get('/online-bookings', function () {
     return view('bookings.index');
 })->name('bookings');
 
-Route::get('/customers', function () {
-    return view('clients.index');
+Route::get('/contacts', function () {
+    return view('contacts.index');
 })->name('contacts');
 
 Route::get('/marketing', function () {
