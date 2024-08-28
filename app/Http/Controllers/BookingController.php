@@ -2,64 +2,54 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Booking;
 use Illuminate\Http\Request;
+use App\Models\Booking;
+use App\Models\User;
+use App\Models\Staff;
 
 class BookingController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
-    public function index()
-    {
-        //
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     */
+    // Show the form for creating a new booking
     public function create()
     {
-        //
+        $users = User::all(); // Get all users
+        $staff = Staff::all(); // Get all staff members
+        return view('bookings.create', compact('users', 'staff'));
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
+    // Store a newly created booking in the database
     public function store(Request $request)
     {
-        //
+        // Validate the incoming request data
+        $validatedData = $request->validate([
+            'user_id' => 'required|exists:users,id',
+            'staff_id' => 'required|exists:staff,id',
+            'start_time' => 'required|date',
+            'end_time' => 'required|date|after:start_time',
+            'status' => 'required|string',
+            'notes' => 'nullable|string',
+        ]);
+
+        // Create a new booking
+        Booking::create($validatedData);
+
+        // Redirect back with a success message
+        return redirect()->route('bookings.index')->with('success', 'Booking created successfully.');
     }
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(Booking $booking)
+    // List all bookings
+    public function index()
     {
-        //
+        $bookings = Booking::with(['user', 'staff'])->get();
+        return view('bookings.index', compact('bookings'));
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(Booking $booking)
+    // Show details of a single booking
+    public function show($id)
     {
-        //
+        $booking = Booking::with(['user', 'staff'])->findOrFail($id);
+        return view('bookings.show', compact('booking'));
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, Booking $booking)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(Booking $booking)
-    {
-        //
-    }
+    // Add other methods like edit, update, and destroy as needed
 }

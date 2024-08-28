@@ -2,64 +2,47 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Service;
 use Illuminate\Http\Request;
+use App\Models\Service;
 
 class ServiceController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
-    public function index()
-    {
-        //
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     */
+    // Show the form for creating a new service
     public function create()
     {
-        //
+        return view('services.create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
+    // Store a newly created service in the database
     public function store(Request $request)
     {
-        //
+        // Validate the incoming request data
+        $validatedData = $request->validate([
+            'name' => 'required|string|max:255',
+            'description' => 'nullable|string',
+            'price' => 'required|numeric|min:0',
+        ]);
+
+        // Create a new service
+        Service::create($validatedData);
+
+        // Redirect back with a success message
+        return redirect()->route('services.index')->with('success', 'Service created successfully.');
     }
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(Service $service)
+    // List all services
+    public function index()
     {
-        //
+        $services = Service::all();
+        return view('services.index', compact('services'));
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(Service $service)
+    // Show details of a single service
+    public function show($id)
     {
-        //
+        $service = Service::findOrFail($id);
+        return view('services.show', compact('service'));
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, Service $service)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(Service $service)
-    {
-        //
-    }
+    // Add other methods like edit, update, and destroy as needed
 }
