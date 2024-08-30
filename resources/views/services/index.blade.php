@@ -8,6 +8,7 @@
 					<h4 class="card-title">Services</h4>
 					
 					<div class="col-auto ms-auto">
+						<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#businessModal"><span class="fa fa-plus fe-16 me-3"></span>Create Business</button>
 						<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#servicesModal"><span class="fa fa-plus fe-16 mr-3"></span>Create Service</button>
 					</div>
 				</div>
@@ -115,6 +116,61 @@
 					</div>
 					</div>
 				</div>
+				</form>
+			</div>
+			<div class="modal-footer d-flex justify-content-between">
+				<div class="custom-control custom-switch">
+				<input type="checkbox" class="custom-control-input" id="RepeatSwitch" checked>
+				<label class="custom-control-label" for="RepeatSwitch">All day</label>
+				</div>
+				<button type="button" class="btn mb-2 btn-primary">Save services</button>
+			</div>
+			</div>
+		</div>
+	</div> <!-- new services modal -->
+
+	<!-- new services modal -->
+	<div class="modal fade" id="businessModal" tabindex="-1" role="dialog" aria-labelledby="servicesModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="varyModalLabel">New business</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body p-4">
+				<form method="POST" action="">
+					@csrf
+					<div class="form-group">
+						<label for="servicesTitle" class="col-form-label">Name</label>
+						<input type="text" class="form-control" id="servicesTitle" placeholder="Add services title">
+					</div>
+					<div class="form-group">
+						<label for="servicesTitle" class="col-form-label">Phone</label>
+						<input type="text" class="form-control" id="servicesTitle" placeholder="Add services title">
+					</div>
+					<div class="form-group">
+						<label for="servicesTitle" class="col-form-label">Email</label>
+						<input type="text" class="form-control" id="servicesTitle" placeholder="Add services title">
+					</div>
+					<div class="form-group">
+						<label for="servicesNote" class="col-form-label">Description</label>
+						<textarea class="form-control" id="servicesNote" placeholder="Add some note for your services"></textarea>
+					</div>
+					<div class="form-group">
+						<label for="servicesNote" class="col-form-label">Description</label>
+						<textarea class="form-control" id="servicesNote" placeholder="Add some note for your services"></textarea>
+					</div>
+					<div class="form-row">
+						<div class="form-group col-md-8">
+						<label for="servicesType">services type</label>
+						<select id="servicesType" class="form-control select2">
+							<option value="work">Work</option>
+							<option value="home">Home</option>
+						</select>
+						</div>
+					</div>
 				</form>
 			</div>
 			<div class="modal-footer d-flex justify-content-between">
