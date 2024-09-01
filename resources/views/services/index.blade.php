@@ -24,20 +24,22 @@
 							</tr>
 						</thead>
 						<tbody>
-							<tr>
-								<td> Hair dressing </td>
-								<td> $ 77.99 </td>
-								<td> 1 hour</td>
-								<td class="py-1">
-									<img src="{{ asset('images/faces/face1.jpg') }}" alt="image" />
-								</td>
-								<td>
-									<div class="justify-content-end d-flex">
-										<a href="" class="mr-10"><i class="fa fa-edit f-2 text-success"></i></a>
-										<a href="" class=""><i class="fa fa-trash f-4 text-danger"></i></a>
-									</div>
-								</td>
-							</tr>
+								@foreach ($services as $service)
+									<tr>
+										<td> {{ $service->name }} </td>
+										<td> $ 77.99 </td>
+										<td> 1 hour</td>
+										<td class="py-1">
+											<img src="{{ asset('images/faces/face1.jpg') }}" alt="image" />
+										</td>
+										<td>
+											<div class="justify-content-end d-flex">
+												<a href="" class="mr-10"><i class="fa fa-edit f-2 text-success"></i></a>
+												<a href="" class=""><i class="fa fa-trash f-4 text-danger"></i></a>
+											</div>
+										</td>
+									</tr>
+								@endforeach
 						</tbody>
 					</table>
 
@@ -51,135 +53,75 @@
 	<div class="modal fade" id="servicesModal" tabindex="-1" role="dialog" aria-labelledby="servicesModalLabel" aria-hidden="true">
 		<div class="modal-dialog" role="document">
 			<div class="modal-content">
-			<div class="modal-header">
-				<h5 class="modal-title" id="varyModalLabel">New services</h5>
-				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-				<span aria-hidden="true">&times;</span>
-				</button>
-			</div>
-			<div class="modal-body p-4">
-				<form>
-				<div class="form-group">
-					<label for="servicesTitle" class="col-form-label">Title</label>
-					<input type="text" class="form-control" id="servicesTitle" placeholder="Add services title">
-				</div>
-				<div class="form-group">
-					<label for="servicesNote" class="col-form-label">Note</label>
-					<textarea class="form-control" id="servicesNote" placeholder="Add some note for your services"></textarea>
-				</div>
-				<div class="form-row">
-					<div class="form-group col-md-8">
-					<label for="servicesType">services type</label>
-					<select id="servicesType" class="form-control select2">
-						<option value="work">Work</option>
-						<option value="home">Home</option>
-					</select>
+				<form method="POST" action="{{ route('create-service') }}">
+					@csrf
+					<div class="modal-header">
+						<h5 class="modal-title" id="varyModalLabel">New services</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+						</button>
 					</div>
-				</div>
-				<div class="form-row">
-					<div class="form-group col-md-6">
-					<label for="date-input1">Start Date</label>
-					<div class="input-group">
-						<div class="input-group-prepend">
-						<div class="input-group-text" id="button-addon-date"><span class="fe fe-calendar fe-16"></span></div>
+					<div class="modal-body p-4">
+						<div class="form-group">
+							<label for="servicesTitle" class="col-form-label">Name</label>
+							<input type="text" class="form-control" id="servicesTitle" name="name" placeholder="Add services title">
 						</div>
-						<input type="text" class="form-control drgpicker" id="drgpicker-start" value="04/24/2020">
-					</div>
-					</div>
-					<div class="form-group col-md-6">
-					<label for="startDate">Start Time</label>
-					<div class="input-group">
-						<div class="input-group-prepend">
-						<div class="input-group-text" id="button-addon-time"><span class="fe fe-clock fe-16"></span></div>
+						<div class="form-group">
+							<label for="servicesTitle" class="col-form-label">Price</label>
+							<input type="text" class="form-control" id="servicesTitle" name="price" placeholder="Add services price">
 						</div>
-						<input type="text" class="form-control time-input" id="start-time" placeholder="10:00 AM">
-					</div>
-					</div>
-				</div>
-				<div class="form-row">
-					<div class="form-group col-md-6">
-					<label for="date-input1">End Date</label>
-					<div class="input-group">
-						<div class="input-group-prepend">
-						<div class="input-group-text" id="button-addon-date"><span class="fe fe-calendar fe-16"></span></div>
+						<div class="form-group">
+							<label for="servicesNote" class="col-form-label">Description</label>
+							<textarea class="form-control" id="servicesNote" name="description" placeholder="Add some note for your services"></textarea>
 						</div>
-						<input type="text" class="form-control drgpicker" id="drgpicker-end" value="04/24/2020">
 					</div>
+					<div class="modal-footer d-flex justify-content-between">
+						<button type="submit" class="btn mb-2 btn-primary">Create service</button>
 					</div>
-					<div class="form-group col-md-6">
-					<label for="startDate">End Time</label>
-					<div class="input-group">
-						<div class="input-group-prepend">
-						<div class="input-group-text" id="button-addon-time"><span class="fe fe-clock fe-16"></span></div>
-						</div>
-						<input type="text" class="form-control time-input" id="end-time" placeholder="11:00 AM">
-					</div>
-					</div>
-				</div>
 				</form>
-			</div>
-			<div class="modal-footer d-flex justify-content-between">
-				<div class="custom-control custom-switch">
-				<input type="checkbox" class="custom-control-input" id="RepeatSwitch" checked>
-				<label class="custom-control-label" for="RepeatSwitch">All day</label>
-				</div>
-				<button type="button" class="btn mb-2 btn-primary">Save services</button>
-			</div>
 			</div>
 		</div>
 	</div> <!-- new services modal -->
 
-	<!-- new services modal -->
+	<!-- new business modal -->
 	<div class="modal fade" id="businessModal" tabindex="-1" role="dialog" aria-labelledby="servicesModalLabel" aria-hidden="true">
 		<div class="modal-dialog" role="document">
 			<div class="modal-content">
-			<div class="modal-header">
-				<h5 class="modal-title" id="varyModalLabel">New business</h5>
-				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-				<span aria-hidden="true">&times;</span>
-				</button>
-			</div>
-			<div class="modal-body p-4">
-				<form method="POST" action="">
+				<form method="POST" action="{{ route('create-business') }}">
 					@csrf
-					<div class="form-group">
-						<label for="servicesTitle" class="col-form-label">Name</label>
-						<input type="text" class="form-control" id="servicesTitle" placeholder="Add services title">
+					<div class="modal-header">
+						<h5 class="modal-title" id="varyModalLabel">New business</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+						</button>
 					</div>
-					<div class="form-group">
-						<label for="servicesTitle" class="col-form-label">Phone</label>
-						<input type="text" class="form-control" id="servicesTitle" placeholder="Add services title">
+					<div class="modal-body p-4">
+							<div class="form-group">
+								<label for="servicesTitle" class="col-form-label">Name</label>
+								<input type="text" class="form-control" id="servicesTitle" name="name" placeholder="Enter business name">
+							</div>
+							<div class="form-group">
+								<label for="servicesTitle" class="col-form-label">Phone</label>
+								<input type="text" class="form-control" id="servicesTitle" name="phone" placeholder="Add business phone number">
+							</div>
+							<div class="form-group">
+								<label for="servicesTitle" class="col-form-label">Email</label>
+								<input type="text" class="form-control" id="servicesTitle" name="email" placeholder="Enter business email">
+							</div>
+							<div class="form-group">
+								<label for="servicesNote" class="col-form-label">Description</label>
+								<textarea class="form-control" id="servicesNote" name="description" placeholder="Enter business description"></textarea>
+							</div>
+							<div class="form-group">
+								<label for="servicesNote" class="col-form-label">Address</label>
+								<textarea class="form-control" id="servicesNote" name="address" placeholder="Enter business address"></textarea>
+							</div>
+							<input type="hidden" name="owner_id" >
 					</div>
-					<div class="form-group">
-						<label for="servicesTitle" class="col-form-label">Email</label>
-						<input type="text" class="form-control" id="servicesTitle" placeholder="Add services title">
-					</div>
-					<div class="form-group">
-						<label for="servicesNote" class="col-form-label">Description</label>
-						<textarea class="form-control" id="servicesNote" placeholder="Add some note for your services"></textarea>
-					</div>
-					<div class="form-group">
-						<label for="servicesNote" class="col-form-label">Description</label>
-						<textarea class="form-control" id="servicesNote" placeholder="Add some note for your services"></textarea>
-					</div>
-					<div class="form-row">
-						<div class="form-group col-md-8">
-						<label for="servicesType">services type</label>
-						<select id="servicesType" class="form-control select2">
-							<option value="work">Work</option>
-							<option value="home">Home</option>
-						</select>
-						</div>
+					<div class="modal-footer d-flex justify-content-between">
+						<button type="submit" class="btn mb-2 btn-primary">Save services</button>
 					</div>
 				</form>
-			</div>
-			<div class="modal-footer d-flex justify-content-between">
-				<div class="custom-control custom-switch">
-				<input type="checkbox" class="custom-control-input" id="RepeatSwitch" checked>
-				<label class="custom-control-label" for="RepeatSwitch">All day</label>
-				</div>
-				<button type="button" class="btn mb-2 btn-primary">Save services</button>
-			</div>
 			</div>
 		</div>
 	</div> <!-- new services modal -->

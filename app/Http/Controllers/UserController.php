@@ -102,5 +102,26 @@ class userController extends Controller
             return back()->withErrors(['email' => 'Invalid credentials']);
         }
     }
-    // Add other methods like edit, update, and destroy as needed
+    // Add business to user account
+
+    public function addBusiness ($businessId) {
+
+        // Get the authenticated user
+        $user = Auth::user();
+
+        // Find the business by its ID
+        $business = Business::find($businessId);
+
+        // Check if the business exists
+        if (!$business) {
+            return redirect()->back()->with('error', 'Business not found.');
+        }
+
+        // Assign the business ID to the user's business_id column
+        $user->business_id = $business->id;
+        $user->save();
+
+        // Redirect back with a success message
+        return redirect()->back()->with('success', 'Business assigned successfully.');
+    }
 }

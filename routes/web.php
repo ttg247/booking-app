@@ -2,6 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\BusinessController;
+use App\Http\Controllers\ServiceController;
+use App\Http\Controllers\ContactController;
 
       Route::get('/login', function () {
         return view('auth.login');
@@ -41,10 +44,10 @@ Route::middleware('auth')->group(function () {
         return view('bookings.index');
     })->name('bookings');
     
-    Route::get('/contacts', function () {
-        return view('contacts.index');
-    })->name('contacts');
     
+    Route::get('/contacts', [ContactController::class, 'index'])->name('contacts');
+
+
     Route::get('/marketing', function () {
         return view('marketing.index');
     })->name('marketing');
@@ -62,9 +65,12 @@ Route::middleware('auth')->group(function () {
     })->name('reports-clients');
     
     
-    Route::get('/services', function () {
-        return view('services.index');
-    })->name('services');
+    Route::get('/services', [ServiceController::class, 'index'])->name('services');
+
+    //post method to create business
+    Route::post('/create-business', [BusinessController::class, 'store'])->name('create-business');
+    Route::post('/create-service', [ServiceController::class, 'store'])->name('create-service');
+
     
     Route::get('/staff', function () {
         return view('staff.index');

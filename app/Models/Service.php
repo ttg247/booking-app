@@ -7,5 +7,21 @@ use Illuminate\Database\Eloquent\Model;
 
 class Service extends Model
 {
-    use HasFactory;
+    /**
+     * The attributes that are mass assignable.
+     */
+    use HasFactory;protected $fillable = [
+        'name',
+        'description',
+        'price',
+        'business_id',
+    ];
+
+    /**
+     * Get the business that owns the service.
+     */
+    public function business()
+    {
+        return $this->belongsTo(Business::class);
+    }
 }

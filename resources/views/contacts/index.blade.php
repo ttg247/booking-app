@@ -10,22 +10,24 @@
 			</div>
 		</div>
 		<div id="contact-cards" class="row p-2">
-
-			<div class="contact-component col-lg-3 stretch-card transparent">
-				<div class="card contact-card card-tale">
-					<div class="card-body css-19tr4eq">
-						<img class="contact-profile " src="{{ asset('images/faces/face28.jpg') }}" alt="profile" />
-						<p class="contact-name">Theo Georgewill</p>
-						<div class="client_infoField">
-							<i class="fa fa-phone"></i>
-							+234092919
-						</div><div class="client_infoField">
-							<i class="fa fa-envelope"></i>
-							ttggwll@gmail.com
+			@foreach ($contacts as $contact) 
+				<div class="contact-component col-lg-4 my-4 stretch-card transparent">
+						<div class="card contact-card card-tale">
+							<div class="card-body css-19tr4eq">
+								<img class="contact-profile " src="{{ asset('images/faces/face28.jpg') }}" alt="profile" />
+								<p class="contact-name">{{ $contact->name }}</p>
+								<div class="client_infoField">
+									<i class="fa fa-phone"></i>
+									{{ $contact->phone }}
+								</div>
+								<div class="client_infoField">
+									<i class="fa fa-envelope"></i>
+									{{ $contact->email }}
+								</div>
+							</div>
 						</div>
-					</div>
 				</div>
-			</div>
+			@endforeach
 		</div>
 	</div>
 	<!-- new contact modal -->

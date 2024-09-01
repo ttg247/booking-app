@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Contact;
 use App\Models\User;
+use Illuminate\Support\Facades\Auth;
 
 class ContactController extends Controller
 {
@@ -38,7 +39,15 @@ class ContactController extends Controller
     // List all contacts
     public function index()
     {
-        $contacts = Contact::with('user')->get();
+        $user = Auth::user();
+
+        if (!$user->business_id) {
+            return redirect()->back()->with('error', 'You need to have a business associated with your account to view contacts.');
+        }
+
+        // Retrieve all contacts associated with the user's business
+        $contacts = User::where('business_id', $user->business_id)->get();
+
         return view('contacts.index', compact('contacts'));
     }
 
