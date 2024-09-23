@@ -28,6 +28,7 @@ use App\Http\Controllers\FacebookAuthController;
     // Google Routes
     Route::get('auth/google', [GoogleController::class, 'redirectToGoogle']);
     Route::get('auth/google/callback', [GoogleController::class, 'handleGoogleCallback']);
+    Route::get('/calendar/events', [GoogleController::class, 'getEvents']);
 
     // Facebook Routes
     Route::get('auth/facebook', [FacebookAuthController::class, 'redirectToFacebook']);
