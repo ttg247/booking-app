@@ -25,7 +25,7 @@ class GoogleController extends Controller
             'google_refresh_token' => $googleUser->refreshToken,
         ]);
         
-        return redirect('home');
+        return redirect()->route('home');
     }
 
     protected function loginOrRegisterGoogleUser($googleUser)
