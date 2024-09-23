@@ -18,7 +18,6 @@ class GoogleController extends Controller
         ->scopes([
             'https://www.googleapis.com/auth/calendar', // Full access to the calendar
             'https://www.googleapis.com/auth/calendar.events',
-            'https://www.googleapis.com/auth/calendar.readonly',
         ])
         ->redirect();
     }

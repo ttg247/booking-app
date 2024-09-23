@@ -6,7 +6,7 @@ use App\Http\Controllers\BusinessController;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\GoogleController;
-use App\Http\Controllers\FacebookAuthController;
+use App\Http\Controllers\FacebookController;
 
       Route::get('/login', function () {
         return view('auth.login');
@@ -31,8 +31,8 @@ use App\Http\Controllers\FacebookAuthController;
     Route::get('/calendar/events', [GoogleController::class, 'getEvents']);
 
     // Facebook Routes
-    Route::get('auth/facebook', [FacebookAuthController::class, 'redirectToFacebook']);
-    Route::get('auth/facebook/callback', [FacebookAuthController::class, 'handleFacebookCallback']);
+    Route::get('auth/facebook', [FacebookController::class, 'redirectToFacebook']);
+    Route::get('auth/facebook/callback', [FacebookController::class, 'handleFacebookCallback']);
 
 
 //protected routes

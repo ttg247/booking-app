@@ -18,7 +18,7 @@ class FacebookController extends Controller
         $facebookUser = Socialite::driver('facebook')->stateless()->user();
         $this->loginOrRegisterFacebookUser($facebookUser);
         
-        return redirect('/dashboard');
+        return redirect()->route('home');
     }
 
     protected function loginOrRegisterFacebookUser($facebookUser)

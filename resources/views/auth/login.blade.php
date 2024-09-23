@@ -55,8 +55,9 @@
                 </a>
 						</div>
 						<div class="mb-2 d-grid gap-2">
-							<button type="button" class="btn btn-block btn-facebook auth-form-btn">
-							<i class="ti-facebook me-2"></i>Connect using facebook </button>
+							<a href="{{ url('auth/facebook') }}" class="btn btn-block btn-facebook auth-form-btn">
+                <i class="ti-facebook me-2"></i>Connect using facebook 
+              </a>
 						</div>
 						<div class="text-center mt-4 font-weight-light"> 
 							Don't have an account? 
