@@ -5,6 +5,8 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\BusinessController;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\GoogleController;
+use App\Http\Controllers\FacebookAuthController;
 
       Route::get('/login', function () {
         return view('auth.login');
@@ -23,10 +25,19 @@ use App\Http\Controllers\ContactController;
 
     Route::post('/login', [UserController::class, 'login'])->name('login');
     
+    // Google Routes
+    Route::get('auth/google', [GoogleController::class, 'redirectToGoogle']);
+    Route::get('auth/google/callback', [GoogleController::class, 'handleGoogleCallback']);
+
+    // Facebook Routes
+    Route::get('auth/facebook', [FacebookAuthController::class, 'redirectToFacebook']);
+    Route::get('auth/facebook/callback', [FacebookAuthController::class, 'handleFacebookCallback']);
+
+
 //protected routes
 Route::middleware('auth')->group(function () {
     // Routes that only owners can access   
-    
+
     Route::get('/', function () {
         return view('home');
     })->name('home');

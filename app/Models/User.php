@@ -22,6 +22,13 @@ class User extends Authenticatable
         'password',
         'role',
         'phone',
+        'google_id',             // Google ID
+        'facebook_id',           // Facebook ID
+        'google_avatar',         // Google avatar URL
+        'facebook_avatar',       // Facebook avatar URL
+        'google_access_token',   // Google access token
+        'google_refresh_token',  // Google refresh token
+
     ];
 
     /**
@@ -32,6 +39,8 @@ class User extends Authenticatable
     protected $hidden = [
         'password',
         'remember_token',
+        'google_access_token',
+        'google_refresh_token',
     ];
 
     /**
